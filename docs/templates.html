@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Template Evaluations - Agency Template System</title>
+  <link rel="stylesheet" href="styles/tokens.css">
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/utilities.css">
+  <link rel="stylesheet" href="styles/buttons.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { min-height: 100vh; }
+    .hero-small { padding: 120px 0 60px; text-align: center; }
+    .hero-small h1 { font-size: clamp(2.5rem, 5vw, 4rem); letter-spacing: -0.03em; margin-bottom: 1rem; }
+    .hero-small p { color: var(--color-text-secondary); max-width: 600px; margin: 0 auto; }
+    .templates-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 24px;
+      padding: 60px 0;
+    }
+    .template-card {
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: 16px;
+      padding: 24px;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .template-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--color-accent);
+    }
+    .template-card-rank {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      background: var(--color-bg-tertiary);
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-text-muted);
+      margin-bottom: 12px;
+    }
+    .template-card-rank.top-5 { background: var(--color-accent); color: white; }
+    .template-card-name {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .template-card-score {
+      font-size: 0.875rem;
+      padding: 4px 8px;
+      background: var(--color-bg-tertiary);
+      border-radius: 6px;
+      color: var(--color-accent);
+      font-weight: 500;
+    }
+    .template-card-category {
+      font-size: 0.875rem;
+      color: var(--color-text-muted);
+      margin-bottom: 16px;
+    }
+    .template-card-highlight {
+      font-size: 0.875rem;
+      color: var(--color-text-secondary);
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+    .template-card-links {
+      display: flex;
+      gap: 12px;
+    }
+    .template-card-links a {
+      font-size: 0.875rem;
+      color: var(--color-text-muted);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .template-card-links a:hover { color: var(--color-text); }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--color-text-muted);
+      text-decoration: none;
+      font-size: 0.875rem;
+      margin-bottom: 24px;
+    }
+    .back-link:hover { color: var(--color-text); }
+    .nav-simple {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 16px 24px;
+      background: rgba(0,0,0,0.8);
+      backdrop-filter: blur(12px);
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav-simple-logo { font-weight: 600; color: var(--color-text); text-decoration: none; }
+    .nav-simple-links { display: flex; gap: 24px; }
+    .nav-simple-links a { color: var(--color-text-muted); text-decoration: none; font-size: 0.875rem; }
+    .nav-simple-links a:hover { color: var(--color-text); }
+  </style>
+</head>
+<body>
+  <nav class="nav-simple">
+    <a href="index.html" class="nav-simple-logo">Agency Template System</a>
+    <div class="nav-simple-links">
+      <a href="index.html">Demo</a>
+      <a href="templates.html">Templates</a>
+      <a href="https://github.com/ChaiWithJai/agency-template-system" target="_blank">GitHub</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <section class="hero-small">
+      <h1>20 Template Evaluations</h1>
+      <p>Semantic analysis of the top Framer agency templates using 4 expert perspectives: Design, UI Engineering, Animation, and Business.</p>
+    </section>
+
+    <div class="templates-grid">
+      <!-- Rank 1: Effica -->
+      <div class="template-card">
+        <span class="template-card-rank top-5">1</span>
+        <h3 class="template-card-name">Effica <span class="template-card-score">9.0/10</span></h3>
+        <p class="template-card-category">AI/SaaS Agency</p>
+        <p class="template-card-highlight">Exceptional animation timing with sophisticated scroll-triggered reveals. Clean dark theme perfect for tech products.</p>
+        <div class="template-card-links">
+          <a href="evaluations/04-effica.html">View Evaluation</a>
+          <a href="https://effica.framer.website/" target="_blank">Live Demo</a>
+        </div>
+      </div>
+
+      <!-- Rank 2: Scarlet -->
+      <div class="template-card">
+        <span class="template-card-rank top-5">2</span>
+        <h3 class="template-card-name">Scarlet <span class="template-card-score">9.0/10</span></h3>
+        <p class="template-card-category">Creative Agency</p>
+        <p class="template-card-highlight">Bold typography and unique personality. Strong visual hierarchy with distinctive color palette.</p>
+        <div class="template-card-links">
+          <a href="evaluations/06-scarlet.html">View Evaluation</a>
+          <a href="https://scarlet.framer.website/" target="_blank">Live Demo</a>
+        </div>
+      </div>
+
+      <!-- Rank 3: Trifecta -->
+      <div class="template-card">
+        <span class="template-card-rank top-5">3</span>
+        <h3 class="template-card-name">Trifecta <span class="template-card-score">9.0/10</span></h3>
+        <p class="template-card-category">Tech Agency</p>
+        <p class="template-card-highlight">Futuristic dark theme with gradient accents. Excellent for showcasing technical capabilities.</p>
+        <div class="template-card-links">
+          <a href="evaluations/05-trifecta.html">View Evaluation</a>
+          <a href="https://trifecta.framer.website/" target="_blank">Live Demo</a>
+        </div>
+      </div>
+
+      <!-- Rank 4: MONO AI -->
+      <div class="template-card">
+        <span class="template-card-rank top-5">4</span>
+        <h3 class="template-card-name">MONO AI <span class="template-card-score">9.0/10</span></h3>
+        <p class="template-card-category">AI Products</p>
+        <p class="template-card-highlight">Word-by-word text reveals and sophisticated micro-interactions. Pure black aesthetic with Geist font.</p>
+        <div class="template-card-links">
+          <a href="evaluations/02-monoai.html">View Evaluation</a>
+          <a href="https://monoai.framer.website/" target="_blank">Live Demo</a>
+        </div>
+      </div>
+
+      <!-- Rank 5: Optimo -->
+      <div class="template-card">
+        <span class="template-card-rank top-5">5</span>
+        <h3 class="template-card-name">Optimo <span class="template-card-score">8.75/10</span></h3>
+        <p class="template-card-category">Marketing Agency</p>
+        <p class="template-card-highlight">Clean minimalism with excellent whitespace usage. Professional without being boring.</p>
+        <div class="template-card-links">
+          <a href="evaluations/07-optimo.html">View Evaluation</a>
+          <a href="https://optimo.framer.website/" target="_blank">Live Demo</a>
+        </div>
+      </div>
+
+      <!-- Rank 6: Kanso -->
+      <div class="template-card">
+        <span class="template-card-rank">6</span>
+        <h3 class="template-card-name">Kanso <span class="template-card-score">8.6/10</span></h3>
+        <p class="template-card-category">Design Studio</p>
+        <p class="template-card-highlight">Japanese-inspired minimalism. Zen-like spacing and typography with subtle animations.</p>
+        <div class="template-card-links">
+          <a href="evaluations/08-kanso.html">View Evaluation</a>
+          <a href="https://kanso.framer.website/" target="_blank">Live Demo</a>
+        </div>
+      </div>
+
+      <!-- Rank 7: Arpeggio -->
+      <div class="template-card">
+        <span class="template-card-rank">7</span>
+        <h3 class="template-card-name">Arpeggio <span class="template-card-score">8.6/10</span></h3>
+        <p class="template-card-category">Creative Studio</p>
+        <p class="template-card-highlight">Musical theme integration with rhythmic layouts. Warm cream palette with creative flair.</p>
+        <div class="template-card-links">
+          <a href="evaluations/09-arpeggio.html">View Evaluation</a>
+          <a href="https://arpeggio.framer.website/" target="_blank">Live Demo</a>
+        </div>
+      </div>
+
+      <!-- Rank 8: Noora -->
+      <div class="template-card">
+        <span class="template-card-rank">8</span>
+        <h3 class="template-card-name">Noora <span class="template-card-score">8.6/10</span></h3>
+        <p class="template-card-category">Wellness/Coaching</p>
+        <p class="template-card-highlight">Warm palette perfect for personal brands. Approachable and trustworthy aesthetic.</p>
+        <div class="template-card-links">
+          <a href="evaluations/10-noora.html">View Evaluation</a>
+          <a href="https://noora.framer.website/" target="_blank">Live Demo</a>
+        </div>
+      </div>
+
+      <!-- Rank 9: Fabrica -->
+      <div class="template-card">
+        <span class="template-card-rank">9</span>
+        <h3 class="template-card-name">Fabrica <span class="template-card-score">8.6/10</span></h3>
+        <p class="template-card-category">Digital Agency</p>
+        <p class="template-card-highlight">Strong grid system with excellent responsive behavior. Solid foundation for any agency.</p>
+        <div class="template-card-links">
+          <a href="evaluations/11-fabrica.html">View Evaluation</a>
+          <a href="https://fabrica.framer.website/" target="_blank">Live Demo</a>
+        </div>
+      </div>
+
+      <!-- Rank 10: Nakula -->
+      <div class="template-card">
+        <span class="template-card-rank">10</span>
+        <h3 class="template-card-name">Nakula <span class="template-card-score">8.6/10</span></h3>
+        <p class="template-card-category">Multi-purpose</p>
+        <p class="template-card-highlight">Versatile components that work across industries. Excellent component library.</p>
+        <div class="template-card-links">
+          <a href="evaluations/12-nakula.html">View Evaluation</a>
+          <a href="https://nakula.framer.website/" target="_blank">Live Demo</a>
+        </div>
+      </div>
+
+      <!-- Rank 11: BrightEdge -->
+      <div class="template-card">
+        <span class="template-card-rank">11</span>
+        <h3 class="template-card-name">BrightEdge <span class="template-card-score">8.4/10</span></h3>
+        <p class="template-card-category">Marketing Agency</p>
+        <p class="template-card-highlight">Comprehensive sections covering all agency needs. Rotating badge and dual marquees.</p>
+        <div class="template-card-links">
+          <a href="evaluations/03-brightedge.html">View Evaluation</a>
+          <a href="https://brightedge.framer.website/" target="_blank">Live Demo</a>
+        </div>
+      </div>
+
+      <!-- Rank 12: Viral -->
+      <div class="template-card">
+        <span class="template-card-rank">12</span>
+        <h3 class="template-card-name">Viral <span class="template-card-score">8.4/10</span></h3>
+        <p class="template-card-category">Social Media Agency</p>
+        <p class="template-card-highlight">Instagram-native aesthetic with cream backgrounds. Perfect for social media marketing.</p>
+        <div class="template-card-links">
+          <a href="evaluations/01-viral.html">View Evaluation</a>
+          <a href="https://viral.framer.website/" target="_blank">Live Demo</a>
+        </div>
+      </div>
+
+      <!-- Rank 13: Orbai -->
+      <div class="template-card">
+        <span class="template-card-rank">13</span>
+        <h3 class="template-card-name">Orbai <span class="template-card-score">8.3/10</span></h3>
+        <p class="template-card-category">AI/Tech</p>
+        <p class="template-card-highlight">Gradient hero backgrounds with orb animations. Futuristic AI product aesthetic.</p>
+        <div class="template-card-links">
+          <a href="evaluations/13-orbai.html">View Evaluation</a>
+          <a href="https://orbai.framer.website/" target="_blank">Live Demo</a>
+        </div>
+      </div>
+
+      <!-- Rank 14: Sadewa -->
+      <div class="template-card">
+        <span class="template-card-rank">14</span>
+        <h3 class="template-card-name">Sadewa <span class="template-card-score">8.25/10</span></h3>
+        <p class="template-card-category">Agency</p>
+        <p class="template-card-highlight">Numbered sections with clear content hierarchy. Professional structure.</p>
+        <div class="template-card-links">
+          <a href="evaluations/14-sadewa.html">View Evaluation</a>
+          <a href="https://sadewa.framer.website/" target="_blank">Live Demo</a>
+        </div>
+      </div>
+
+      <!-- Rank 15: AI Supply -->
+      <div class="template-card">
+        <span class="template-card-rank">15</span>
+        <h3 class="template-card-name">AI Supply <span class="template-card-score">8.25/10</span></h3>
+        <p class="template-card-category">AI Tools</p>
+        <p class="template-card-highlight">Product-focused layout for AI tools. Clear feature presentation.</p>
+        <div class="template-card-links">
+          <a href="evaluations/15-aisupply.html">View Evaluation</a>
+          <a href="https://ai-supply.framer.website/" target="_blank">Live Demo</a>
+        </div>
+      </div>
+
+      <!-- Rank 16: Bima -->
+      <div class="template-card">
+        <span class="template-card-rank">16</span>
+        <h3 class="template-card-name">Bima <span class="template-card-score">8.2/10</span></h3>
+        <p class="template-card-category">Corporate</p>
+        <p class="template-card-highlight">Professional corporate structure. Conservative but polished design.</p>
+        <div class="template-card-links">
+          <a href="evaluations/16-bima.html">View Evaluation</a>
+          <a href="https://bima.framer.website/" target="_blank">Live Demo</a>
+        </div>
+      </div>
+
+      <!-- Rank 17: Lyniq -->
+      <div class="template-card">
+        <span class="template-card-rank">17</span>
+        <h3 class="template-card-name">Lyniq <span class="template-card-score">8.1/10</span></h3>
+        <p class="template-card-category">Tech Startup</p>
+        <p class="template-card-highlight">Modern minimal with clean lines. Good for startup launches.</p>
+        <div class="template-card-links">
+          <a href="evaluations/17-lyniq.html">View Evaluation</a>
+          <a href="https://lyniq.framer.website/" target="_blank">Live Demo</a>
+        </div>
+      </div>
+
+      <!-- Rank 18: Amber -->
+      <div class="template-card">
+        <span class="template-card-rank">18</span>
+        <h3 class="template-card-name">Amber <span class="template-card-score">8.0/10</span></h3>
+        <p class="template-card-category">Creative</p>
+        <p class="template-card-highlight">Warm amber tones with creative layouts. Unique color approach.</p>
+        <div class="template-card-links">
+          <a href="evaluations/18-amber.html">View Evaluation</a>
+          <a href="https://amber.framer.website/" target="_blank">Live Demo</a>
+        </div>
+      </div>
+
+      <!-- Rank 19: Agevia -->
+      <div class="template-card">
+        <span class="template-card-rank">19</span>
+        <h3 class="template-card-name">Agevia <span class="template-card-score">8.0/10</span></h3>
+        <p class="template-card-category">Agency</p>
+        <p class="template-card-highlight">Classic agency structure with modern touches. Reliable choice.</p>
+        <div class="template-card-links">
+          <a href="evaluations/19-agevia.html">View Evaluation</a>
+          <a href="https://agevia.framer.website/" target="_blank">Live Demo</a>
+        </div>
+      </div>
+
+      <!-- Rank 20: LogiNord -->
+      <div class="template-card">
+        <span class="template-card-rank">20</span>
+        <h3 class="template-card-name">LogiNord <span class="template-card-score">7.8/10</span></h3>
+        <p class="template-card-category">Logistics</p>
+        <p class="template-card-highlight">Industry-specific design for logistics companies. Specialized focus.</p>
+        <div class="template-card-links">
+          <a href="evaluations/20-loginord.html">View Evaluation</a>
+          <a href="https://loginord.framer.website/" target="_blank">Live Demo</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="section py-12 border-t">
+    <div class="container">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+        <a href="index.html" class="nav-logo">Agency Template System</a>
+        <p class="text-sm text-muted">&copy; 2025 Built with Claude Code</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

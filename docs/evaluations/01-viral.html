@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viral - Template Evaluation</title>
+  <link rel="stylesheet" href="../styles/tokens.css">
+  <link rel="stylesheet" href="../styles/reset.css">
+  <link rel="stylesheet" href="../styles/utilities.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    body { min-height: 100vh; padding-top: 80px; }
+    .eval-nav { position: fixed; top: 0; left: 0; right: 0; padding: 16px 24px; background: rgba(0,0,0,0.9); backdrop-filter: blur(12px); z-index: 100; display: flex; justify-content: space-between; align-items: center; }
+    .eval-nav a { color: var(--color-text-muted); text-decoration: none; font-size: 0.875rem; }
+    .eval-nav a:hover { color: var(--color-text); }
+    .eval-header { padding: 60px 0; border-bottom: 1px solid var(--color-border); }
+    .eval-title { font-size: clamp(2.5rem, 5vw, 4rem); letter-spacing: -0.03em; margin-bottom: 16px; }
+    .eval-meta { display: flex; flex-wrap: wrap; gap: 24px; margin-bottom: 24px; }
+    .eval-meta-item { display: flex; align-items: center; gap: 8px; }
+    .eval-meta-label { color: var(--color-text-muted); font-size: 0.875rem; }
+    .eval-meta-value { font-weight: 500; }
+    .eval-score { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; background: var(--color-accent); color: white; border-radius: 8px; font-weight: 600; font-size: 1.25rem; }
+    .eval-section { padding: 48px 0; border-bottom: 1px solid var(--color-border); }
+    .eval-section h2 { font-size: 1.5rem; margin-bottom: 24px; letter-spacing: -0.02em; }
+    .eval-section h3 { font-size: 1.125rem; margin: 24px 0 12px; color: var(--color-text-secondary); }
+    .eval-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; }
+    .eval-card { background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: 12px; padding: 20px; }
+    .eval-card-label { font-size: 0.75rem; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; }
+    .eval-card-value { font-size: 1.125rem; font-weight: 500; }
+    .eval-table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+    .eval-table th, .eval-table td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--color-border); }
+    .eval-table th { color: var(--color-text-muted); font-weight: 500; font-size: 0.875rem; }
+    .eval-table td { font-size: 0.875rem; }
+    .eval-code { background: var(--color-bg-tertiary); border-radius: 8px; padding: 16px; overflow-x: auto; margin: 16px 0; }
+    .eval-code pre { font-family: 'JetBrains Mono', monospace; font-size: 0.8125rem; line-height: 1.6; }
+    .score-badge { display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 600; }
+    .score-high { background: rgba(34, 197, 94, 0.2); color: #22c55e; }
+    .score-mid { background: rgba(234, 179, 8, 0.2); color: #eab308; }
+    .color-swatch { display: inline-flex; align-items: center; gap: 8px; }
+    .color-swatch-box { width: 24px; height: 24px; border-radius: 4px; border: 1px solid var(--color-border); }
+    .btn-demo { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; background: var(--color-accent); color: white; text-decoration: none; border-radius: 9999px; font-weight: 500; transition: transform 0.2s; }
+    .btn-demo:hover { transform: translateY(-2px); }
+  </style>
+</head>
+<body>
+  <nav class="eval-nav">
+    <a href="../templates.html">&larr; All Templates</a>
+    <a href="https://viral.framer.website/" target="_blank">View Live Demo &rarr;</a>
+  </nav>
+
+  <div class="container">
+    <header class="eval-header">
+      <div class="eval-score">8.4/10</div>
+      <h1 class="eval-title">Viral</h1>
+      <div class="eval-meta">
+        <div class="eval-meta-item">
+          <span class="eval-meta-label">Category:</span>
+          <span class="eval-meta-value">Social Media Agency</span>
+        </div>
+        <div class="eval-meta-item">
+          <span class="eval-meta-label">Style:</span>
+          <span class="eval-meta-value">Modern Minimal / Social-Native</span>
+        </div>
+        <div class="eval-meta-item">
+          <span class="eval-meta-label">Best For:</span>
+          <span class="eval-meta-value">Social media agencies, content creators, SMM services</span>
+        </div>
+      </div>
+      <a href="https://viral.framer.website/" target="_blank" class="btn-demo">View Live Demo</a>
+    </header>
+
+    <section class="eval-section">
+      <h2>4-Perspective Scores</h2>
+      <div class="eval-grid">
+        <div class="eval-card">
+          <div class="eval-card-label">Design Expert</div>
+          <div class="eval-card-value">9/10 <span class="score-badge score-high">Excellent</span></div>
+          <p style="margin-top: 8px; font-size: 0.875rem; color: var(--color-text-secondary);">Instagram-native aesthetic, beautiful imagery. Some text contrast could be better.</p>
+        </div>
+        <div class="eval-card">
+          <div class="eval-card-label">UI Engineer</div>
+          <div class="eval-card-value">8/10 <span class="score-badge score-high">Strong</span></div>
+          <p style="margin-top: 8px; font-size: 0.875rem; color: var(--color-text-secondary);">Clean structure, good semantics. Heavy on images, load optimization needed.</p>
+        </div>
+        <div class="eval-card">
+          <div class="eval-card-label">Animation Expert</div>
+          <div class="eval-card-value">8/10 <span class="score-badge score-high">Strong</span></div>
+          <p style="margin-top: 8px; font-size: 0.875rem; color: var(--color-text-secondary);">Smooth marquee, subtle hover effects. Could use more scroll-triggered sequences.</p>
+        </div>
+        <div class="eval-card">
+          <div class="eval-card-label">Agency Owner</div>
+          <div class="eval-card-value">8.5/10 <span class="score-badge score-high">Excellent</span></div>
+          <p style="margin-top: 8px; font-size: 0.875rem; color: var(--color-text-secondary);">Clear value prop, strong social proof. Price not immediately visible.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="eval-section">
+      <h2>Design Tokens</h2>
+
+      <h3>Color Palette</h3>
+      <table class="eval-table">
+        <thead>
+          <tr><th>Token</th><th>Value</th><th>Usage</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>--color-bg</td>
+            <td><span class="color-swatch"><span class="color-swatch-box" style="background: #EFEBE5;"></span>#EFEBE5</span></td>
+            <td>Page background - warm cream/beige</td>
+          </tr>
+          <tr>
+            <td>--color-primary</td>
+            <td><span class="color-swatch"><span class="color-swatch-box" style="background: #000000;"></span>#000000</span></td>
+            <td>Headlines, CTAs, text</td>
+          </tr>
+          <tr>
+            <td>--color-text-muted</td>
+            <td><span class="color-swatch"><span class="color-swatch-box" style="background: rgba(0,0,0,0.6);"></span>rgba(0,0,0,0.6)</span></td>
+            <td>Secondary text, descriptions</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Typography</h3>
+      <table class="eval-table">
+        <thead>
+          <tr><th>Element</th><th>Font</th><th>Size</th><th>Weight</th><th>Letter-spacing</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Logo</td><td>Inter</td><td>26px</td><td>500</td><td>-1.56px</td></tr>
+          <tr><td>H1 (Hero)</td><td>Inter</td><td>70-100px</td><td>500</td><td>-6%</td></tr>
+          <tr><td>H2</td><td>Inter</td><td>48-70px</td><td>500</td><td>-4%</td></tr>
+          <tr><td>Body</td><td>Inter</td><td>14-16px</td><td>400-500</td><td>normal</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="eval-section">
+      <h2>Key Patterns</h2>
+
+      <h3>Hero Section</h3>
+      <ul style="margin: 16px 0; padding-left: 24px; color: var(--color-text-secondary);">
+        <li>2-column split layout (text left, iPhone mockup right)</li>
+        <li>Social icons bar above headline</li>
+        <li>3-line headline with italic emphasis on key word</li>
+        <li>Single black pill button CTA</li>
+      </ul>
+
+      <h3>Button Style</h3>
+      <div class="eval-code">
+        <pre>.btn-primary {
+  background: #000000;
+  color: #FFFFFF;
+  border-radius: 50px; /* pill shape */
+  padding: 12px 24px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.btn-primary:hover {
+  transform: scale(1.02);
+}</pre>
+      </div>
+
+      <h3>Components</h3>
+      <ul style="margin: 16px 0; padding-left: 24px; color: var(--color-text-secondary);">
+        <li><strong>Navigation:</strong> Floating pill nav with logo, links, CTA button</li>
+        <li><strong>Logo Marquee:</strong> Auto-scrolling client logos with grayscale filter</li>
+        <li><strong>Stats:</strong> Large numbers with labels in grid layout</li>
+        <li><strong>Testimonials:</strong> Carousel with avatar, quote, name</li>
+      </ul>
+    </section>
+
+    <section class="eval-section">
+      <h2>Key Differentiators</h2>
+      <div class="eval-grid">
+        <div class="eval-card">
+          <div class="eval-card-label">Strength</div>
+          <div class="eval-card-value">Instagram-Native Aesthetic</div>
+          <p style="margin-top: 8px; font-size: 0.875rem; color: var(--color-text-secondary);">Warm cream palette and social imagery feel native to the industry.</p>
+        </div>
+        <div class="eval-card">
+          <div class="eval-card-label">Strength</div>
+          <div class="eval-card-value">Clear Value Proposition</div>
+          <p style="margin-top: 8px; font-size: 0.875rem; color: var(--color-text-secondary);">Hero immediately communicates what the agency does.</p>
+        </div>
+        <div class="eval-card">
+          <div class="eval-card-label">Improvement</div>
+          <div class="eval-card-value">Image Optimization</div>
+          <p style="margin-top: 8px; font-size: 0.875rem; color: var(--color-text-secondary);">Heavy on images - needs lazy loading and compression.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer style="padding: 48px 0; border-top: 1px solid var(--color-border); text-align: center;">
+    <a href="../templates.html" style="color: var(--color-text-muted); text-decoration: none;">&larr; Back to All Templates</a>
+  </footer>
+</body>
+</html>
