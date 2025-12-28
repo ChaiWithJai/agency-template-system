@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agency - Digital Design Studio</title>
+  <meta name="description" content="We build digital products that drive real results. Transform your business with cutting-edge technology and design.">
+
+  <!-- Preload fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../styles/tokens.css">
+  <link rel="stylesheet" href="../styles/reset.css">
+  <link rel="stylesheet" href="../styles/utilities.css">
+  <link rel="stylesheet" href="../styles/animations.css">
+  <link rel="stylesheet" href="../styles/buttons.css">
+  <link rel="stylesheet" href="../components/nav/nav.css">
+  <link rel="stylesheet" href="../components/hero/hero.css">
+  <link rel="stylesheet" href="../components/marquee/marquee.css">
+  <link rel="stylesheet" href="../components/stats/stats.css">
+  <link rel="stylesheet" href="../components/faq/faq.css">
+  <link rel="stylesheet" href="../components/pricing/pricing.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <a href="/" class="nav-logo">Agency</a>
+
+    <div class="nav-links">
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#work" class="nav-link">Work</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#pricing" class="nav-link">Pricing</a>
+      <a href="#faq" class="nav-link">FAQ</a>
+    </div>
+
+    <a href="#contact" class="nav-cta">
+      Get Started
+      <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </svg>
+    </a>
+
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="nav-mobile-menu" id="nav-mobile-menu">
+    <a href="#services" class="nav-mobile-link">Services</a>
+    <a href="#work" class="nav-mobile-link">Work</a>
+    <a href="#about" class="nav-mobile-link">About</a>
+    <a href="#pricing" class="nav-mobile-link">Pricing</a>
+    <a href="#faq" class="nav-mobile-link">FAQ</a>
+    <a href="#contact" class="nav-mobile-cta">Get Started</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero hero--centered hero--gradient" id="hero">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        <span>Now accepting new clients for 2025</span>
+      </div>
+
+      <h1 class="hero-headline" data-text-reveal>
+        We build digital products that drive <span class="accent">real results</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Transform your business with cutting-edge technology and design.
+        We create experiences that convert visitors into customers.
+      </p>
+
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-primary btn-lg">
+          Start a Project
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="#work" class="btn btn-secondary btn-lg">
+          View Our Work
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <div class="hero-scroll-icon"></div>
+      <span>Scroll to explore</span>
+    </div>
+  </section>
+
+  <!-- Logo Marquee -->
+  <section class="marquee marquee--fade">
+    <p class="marquee-label">Trusted by industry leaders</p>
+    <div class="marquee-track">
+      <!-- Replace with actual client logos -->
+      <div class="marquee-item"><img src="https://placehold.co/120x40/1a1a1a/666?text=Client+1" alt="Client"></div>
+      <div class="marquee-item"><img src="https://placehold.co/120x40/1a1a1a/666?text=Client+2" alt="Client"></div>
+      <div class="marquee-item"><img src="https://placehold.co/120x40/1a1a1a/666?text=Client+3" alt="Client"></div>
+      <div class="marquee-item"><img src="https://placehold.co/120x40/1a1a1a/666?text=Client+4" alt="Client"></div>
+      <div class="marquee-item"><img src="https://placehold.co/120x40/1a1a1a/666?text=Client+5" alt="Client"></div>
+      <div class="marquee-item"><img src="https://placehold.co/120x40/1a1a1a/666?text=Client+6" alt="Client"></div>
+      <div class="marquee-item"><img src="https://placehold.co/120x40/1a1a1a/666?text=Client+7" alt="Client"></div>
+      <div class="marquee-item"><img src="https://placehold.co/120x40/1a1a1a/666?text=Client+8" alt="Client"></div>
+      <!-- Duplicates for seamless loop -->
+      <div class="marquee-item"><img src="https://placehold.co/120x40/1a1a1a/666?text=Client+1" alt="Client"></div>
+      <div class="marquee-item"><img src="https://placehold.co/120x40/1a1a1a/666?text=Client+2" alt="Client"></div>
+      <div class="marquee-item"><img src="https://placehold.co/120x40/1a1a1a/666?text=Client+3" alt="Client"></div>
+      <div class="marquee-item"><img src="https://placehold.co/120x40/1a1a1a/666?text=Client+4" alt="Client"></div>
+      <div class="marquee-item"><img src="https://placehold.co/120x40/1a1a1a/666?text=Client+5" alt="Client"></div>
+      <div class="marquee-item"><img src="https://placehold.co/120x40/1a1a1a/666?text=Client+6" alt="Client"></div>
+      <div class="marquee-item"><img src="https://placehold.co/120x40/1a1a1a/666?text=Client+7" alt="Client"></div>
+      <div class="marquee-item"><img src="https://placehold.co/120x40/1a1a1a/666?text=Client+8" alt="Client"></div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="text-center mb-12">
+        <p class="text-sm text-muted uppercase tracking-wider mb-4">01 / Services</p>
+        <h2 class="text-4xl tracking-tighter">What we do best</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-8 bg-card rounded-2xl border animate-on-scroll animate-fade-up">
+          <h3 class="text-xl font-medium mb-3">Brand Strategy</h3>
+          <p class="text-secondary">
+            We craft compelling brand identities that resonate with your audience
+            and set you apart from the competition.
+          </p>
+        </div>
+
+        <div class="p-8 bg-card rounded-2xl border animate-on-scroll animate-fade-up">
+          <h3 class="text-xl font-medium mb-3">Web Design</h3>
+          <p class="text-secondary">
+            Beautiful, responsive websites that convert visitors into customers
+            through intuitive user experiences.
+          </p>
+        </div>
+
+        <div class="p-8 bg-card rounded-2xl border animate-on-scroll animate-fade-up">
+          <h3 class="text-xl font-medium mb-3">Development</h3>
+          <p class="text-secondary">
+            Clean, performant code that brings designs to life with smooth
+            animations and seamless interactions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats section" id="about">
+    <div class="container">
+      <div class="text-center mb-12">
+        <p class="text-sm text-muted uppercase tracking-wider mb-4">02 / About</p>
+        <h2 class="text-4xl tracking-tighter mb-6">Numbers that speak</h2>
+        <p class="text-secondary max-w-xl mx-auto">
+          We've helped businesses of all sizes achieve their digital goals.
+          Here's what we've accomplished together.
+        </p>
+      </div>
+
+      <div class="stats-grid stats-grid--dividers">
+        <div class="stat" data-counter="150">
+          <div class="stat-number">
+            <span class="counter-value">0</span><span class="stat-suffix">+</span>
+          </div>
+          <p class="stat-label">Projects Completed</p>
+        </div>
+
+        <div class="stat" data-counter="50">
+          <div class="stat-number">
+            <span class="counter-value">0</span><span class="stat-suffix">+</span>
+          </div>
+          <p class="stat-label">Happy Clients</p>
+        </div>
+
+        <div class="stat" data-counter="8">
+          <div class="stat-number">
+            <span class="counter-value">0</span><span class="stat-suffix">+</span>
+          </div>
+          <p class="stat-label">Years Experience</p>
+        </div>
+
+        <div class="stat" data-counter="25">
+          <div class="stat-number">
+            <span class="counter-value">0</span><span class="stat-suffix">M+</span>
+          </div>
+          <p class="stat-label">Revenue Generated</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="pricing section" id="pricing" data-billing="monthly">
+    <div class="container">
+      <div class="pricing-header">
+        <p class="text-sm text-muted uppercase tracking-wider mb-4">03 / Pricing</p>
+        <h2 class="pricing-title">Simple, Transparent Pricing</h2>
+        <p class="pricing-subtitle">
+          Choose the plan that works best for you. No hidden fees, cancel anytime.
+        </p>
+      </div>
+
+      <div class="pricing-toggle">
+        <span class="pricing-toggle-label active" data-billing-label="monthly">Monthly</span>
+        <button class="pricing-toggle-switch" aria-label="Toggle billing period"></button>
+        <span class="pricing-toggle-label" data-billing-label="yearly">
+          Yearly
+          <span class="pricing-toggle-badge">Save 20%</span>
+        </span>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="pricing-card-header">
+            <h3 class="pricing-card-name">Starter</h3>
+            <p class="pricing-card-description">Perfect for small projects</p>
+            <div class="pricing-card-price">
+              <span class="pricing-card-currency">$</span>
+              <span class="pricing-card-amount" data-monthly>499</span>
+              <span class="pricing-card-amount" data-yearly>399</span>
+              <span class="pricing-card-period">/month</span>
+            </div>
+          </div>
+          <ul class="pricing-card-features">
+            <li class="pricing-card-feature">
+              <svg class="pricing-card-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Up to 5 pages</span>
+            </li>
+            <li class="pricing-card-feature">
+              <svg class="pricing-card-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Basic SEO</span>
+            </li>
+            <li class="pricing-card-feature">
+              <svg class="pricing-card-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Mobile responsive</span>
+            </li>
+          </ul>
+          <a href="#contact" class="btn btn-outline btn-lg pricing-card-cta">Get Started</a>
+        </div>
+
+        <div class="pricing-card pricing-card--featured">
+          <div class="pricing-card-header">
+            <h3 class="pricing-card-name">Professional</h3>
+            <p class="pricing-card-description">Best for growing businesses</p>
+            <div class="pricing-card-price">
+              <span class="pricing-card-currency">$</span>
+              <span class="pricing-card-amount" data-monthly>999</span>
+              <span class="pricing-card-amount" data-yearly>799</span>
+              <span class="pricing-card-period">/month</span>
+            </div>
+          </div>
+          <ul class="pricing-card-features">
+            <li class="pricing-card-feature">
+              <svg class="pricing-card-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Up to 15 pages</span>
+            </li>
+            <li class="pricing-card-feature">
+              <svg class="pricing-card-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Advanced SEO</span>
+            </li>
+            <li class="pricing-card-feature">
+              <svg class="pricing-card-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Custom animations</span>
+            </li>
+            <li class="pricing-card-feature">
+              <svg class="pricing-card-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>CMS integration</span>
+            </li>
+          </ul>
+          <a href="#contact" class="btn btn-primary btn-lg pricing-card-cta">Get Started</a>
+        </div>
+
+        <div class="pricing-card">
+          <div class="pricing-card-header">
+            <h3 class="pricing-card-name">Enterprise</h3>
+            <p class="pricing-card-description">For large-scale projects</p>
+            <div class="pricing-card-price">
+              <span class="pricing-card-currency">$</span>
+              <span class="pricing-card-amount" data-monthly>2,499</span>
+              <span class="pricing-card-amount" data-yearly>1,999</span>
+              <span class="pricing-card-period">/month</span>
+            </div>
+          </div>
+          <ul class="pricing-card-features">
+            <li class="pricing-card-feature">
+              <svg class="pricing-card-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Unlimited pages</span>
+            </li>
+            <li class="pricing-card-feature">
+              <svg class="pricing-card-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Custom development</span>
+            </li>
+            <li class="pricing-card-feature">
+              <svg class="pricing-card-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>24/7 support</span>
+            </li>
+          </ul>
+          <a href="#contact" class="btn btn-outline btn-lg pricing-card-cta">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq section" id="faq">
+    <div class="container">
+      <div class="faq-header">
+        <p class="text-sm text-muted uppercase tracking-wider mb-4">04 / FAQ</p>
+        <h2 class="faq-title">Frequently Asked Questions</h2>
+        <p class="faq-subtitle">
+          Everything you need to know. Can't find the answer? Contact us.
+        </p>
+      </div>
+
+      <div class="faq-list">
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false">
+            <span>What services do you offer?</span>
+            <span class="accordion-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+            </span>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <p>We offer comprehensive digital services including brand strategy, web design, development, and digital marketing.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false">
+            <span>How long does a typical project take?</span>
+            <span class="accordion-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+            </span>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <p>A typical website takes 6-8 weeks from kickoff to launch. Larger projects may take 12+ weeks.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false">
+            <span>Do you work with clients remotely?</span>
+            <span class="accordion-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+            </span>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <p>Yes! We work with clients worldwide using modern collaboration tools like Slack, Zoom, and Figma.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false">
+            <span>What happens after the project is complete?</span>
+            <span class="accordion-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+            </span>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <p>We provide documentation and training. All projects include 30-day support. We also offer ongoing maintenance retainers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="text-center py-16 px-8 bg-card rounded-3xl border">
+        <h2 class="text-4xl tracking-tighter mb-4">Ready to start your project?</h2>
+        <p class="text-secondary mb-8 max-w-md mx-auto">
+          Let's discuss how we can help bring your vision to life.
+        </p>
+        <a href="mailto:hello@agency.com" class="btn btn-primary btn-lg">
+          Get in Touch
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="section py-12 border-t">
+    <div class="container">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+        <a href="/" class="nav-logo">Agency</a>
+        <div class="flex gap-6 text-sm text-muted">
+          <a href="#" class="link-underline">Twitter</a>
+          <a href="#" class="link-underline">LinkedIn</a>
+          <a href="#" class="link-underline">Instagram</a>
+        </div>
+        <p class="text-sm text-muted">&copy; 2025 Agency. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../js/main.js"></script>
+</body>
+</html>

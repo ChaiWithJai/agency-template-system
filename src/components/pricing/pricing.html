@@ -1,0 +1,195 @@
+<!--
+  Pricing Section Component
+  3-tier pricing with toggle - used by 70% of templates
+-->
+
+<section class="pricing section" id="pricing" data-billing="monthly">
+  <div class="container">
+    <div class="pricing-header">
+      <h2 class="pricing-title">Simple, Transparent Pricing</h2>
+      <p class="pricing-subtitle">
+        Choose the plan that works best for you. No hidden fees, cancel anytime.
+      </p>
+    </div>
+
+    <!-- Billing Toggle -->
+    <div class="pricing-toggle">
+      <span class="pricing-toggle-label active" data-billing-label="monthly">Monthly</span>
+      <button class="pricing-toggle-switch" aria-label="Toggle billing period"></button>
+      <span class="pricing-toggle-label" data-billing-label="yearly">
+        Yearly
+        <span class="pricing-toggle-badge">Save 20%</span>
+      </span>
+    </div>
+
+    <!-- Pricing Cards -->
+    <div class="pricing-grid">
+      <!-- Basic Tier -->
+      <div class="pricing-card">
+        <div class="pricing-card-header">
+          <h3 class="pricing-card-name">Starter</h3>
+          <p class="pricing-card-description">Perfect for small projects and startups</p>
+          <div class="pricing-card-price">
+            <span class="pricing-card-currency">$</span>
+            <span class="pricing-card-amount" data-monthly>499</span>
+            <span class="pricing-card-amount" data-yearly>399</span>
+            <span class="pricing-card-period">/month</span>
+          </div>
+        </div>
+
+        <ul class="pricing-card-features">
+          <li class="pricing-card-feature">
+            <svg class="pricing-card-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+            <span>Up to 5 pages</span>
+          </li>
+          <li class="pricing-card-feature">
+            <svg class="pricing-card-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+            <span>Basic SEO optimization</span>
+          </li>
+          <li class="pricing-card-feature">
+            <svg class="pricing-card-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+            <span>Mobile responsive</span>
+          </li>
+          <li class="pricing-card-feature">
+            <svg class="pricing-card-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+            <span>Contact form</span>
+          </li>
+          <li class="pricing-card-feature pricing-card-feature--disabled">
+            <svg class="pricing-card-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"/>
+              <line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+            <span>Custom animations</span>
+          </li>
+          <li class="pricing-card-feature pricing-card-feature--disabled">
+            <svg class="pricing-card-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"/>
+              <line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+            <span>Priority support</span>
+          </li>
+        </ul>
+
+        <a href="#contact" class="btn btn-outline btn-lg pricing-card-cta">Get Started</a>
+      </div>
+
+      <!-- Pro Tier (Featured) -->
+      <div class="pricing-card pricing-card--featured">
+        <div class="pricing-card-header">
+          <h3 class="pricing-card-name">Professional</h3>
+          <p class="pricing-card-description">Best for growing businesses</p>
+          <div class="pricing-card-price">
+            <span class="pricing-card-currency">$</span>
+            <span class="pricing-card-amount" data-monthly>999</span>
+            <span class="pricing-card-amount" data-yearly>799</span>
+            <span class="pricing-card-period">/month</span>
+          </div>
+        </div>
+
+        <ul class="pricing-card-features">
+          <li class="pricing-card-feature">
+            <svg class="pricing-card-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+            <span>Up to 15 pages</span>
+          </li>
+          <li class="pricing-card-feature">
+            <svg class="pricing-card-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+            <span>Advanced SEO + Analytics</span>
+          </li>
+          <li class="pricing-card-feature">
+            <svg class="pricing-card-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+            <span>Custom animations</span>
+          </li>
+          <li class="pricing-card-feature">
+            <svg class="pricing-card-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+            <span>CMS integration</span>
+          </li>
+          <li class="pricing-card-feature">
+            <svg class="pricing-card-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+            <span>Priority support</span>
+          </li>
+          <li class="pricing-card-feature">
+            <svg class="pricing-card-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+            <span>Monthly maintenance</span>
+          </li>
+        </ul>
+
+        <a href="#contact" class="btn btn-primary btn-lg pricing-card-cta">Get Started</a>
+      </div>
+
+      <!-- Enterprise Tier -->
+      <div class="pricing-card">
+        <div class="pricing-card-header">
+          <h3 class="pricing-card-name">Enterprise</h3>
+          <p class="pricing-card-description">For large-scale projects</p>
+          <div class="pricing-card-price">
+            <span class="pricing-card-currency">$</span>
+            <span class="pricing-card-amount" data-monthly>2,499</span>
+            <span class="pricing-card-amount" data-yearly>1,999</span>
+            <span class="pricing-card-period">/month</span>
+          </div>
+        </div>
+
+        <ul class="pricing-card-features">
+          <li class="pricing-card-feature">
+            <svg class="pricing-card-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+            <span>Unlimited pages</span>
+          </li>
+          <li class="pricing-card-feature">
+            <svg class="pricing-card-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+            <span>Custom development</span>
+          </li>
+          <li class="pricing-card-feature">
+            <svg class="pricing-card-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+            <span>API integrations</span>
+          </li>
+          <li class="pricing-card-feature">
+            <svg class="pricing-card-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+            <span>Dedicated account manager</span>
+          </li>
+          <li class="pricing-card-feature">
+            <svg class="pricing-card-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+            <span>24/7 support</span>
+          </li>
+          <li class="pricing-card-feature">
+            <svg class="pricing-card-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+            <span>SLA guarantee</span>
+          </li>
+        </ul>
+
+        <a href="#contact" class="btn btn-outline btn-lg pricing-card-cta">Contact Sales</a>
+      </div>
+    </div>
+  </div>
+</section>
