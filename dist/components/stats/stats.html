@@ -1,0 +1,141 @@
+<!--
+  Stats Counter Component
+  Animated number counters - used by 80% of templates
+-->
+
+<!-- ========================================
+     VARIANT 1: Basic Stats Grid
+     ======================================== -->
+<section class="stats section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat" data-counter="150">
+        <div class="stat-number">
+          <span class="counter-value">0</span><span class="stat-suffix">+</span>
+        </div>
+        <p class="stat-label">Projects Completed</p>
+      </div>
+
+      <div class="stat" data-counter="50">
+        <div class="stat-number">
+          <span class="counter-value">0</span><span class="stat-suffix">+</span>
+        </div>
+        <p class="stat-label">Happy Clients</p>
+      </div>
+
+      <div class="stat" data-counter="8">
+        <div class="stat-number">
+          <span class="counter-value">0</span><span class="stat-suffix">+</span>
+        </div>
+        <p class="stat-label">Years Experience</p>
+      </div>
+
+      <div class="stat" data-counter="25">
+        <div class="stat-number">
+          <span class="counter-value">0</span><span class="stat-suffix">M+</span>
+        </div>
+        <p class="stat-label">Revenue Generated</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ========================================
+     VARIANT 2: Stats with Dividers
+     ======================================== -->
+<!--
+<section class="stats section bg-secondary">
+  <div class="container">
+    <div class="stats-grid stats-grid--dividers">
+      <div class="stat stat--large" data-counter="500">
+        <div class="stat-number">
+          <span class="counter-value">0</span><span class="stat-suffix">K</span>
+        </div>
+        <p class="stat-label">Social followers gained</p>
+      </div>
+
+      <div class="stat stat--large" data-counter="98">
+        <div class="stat-number">
+          <span class="counter-value">0</span><span class="stat-suffix">%</span>
+        </div>
+        <p class="stat-label">Client satisfaction</p>
+      </div>
+
+      <div class="stat stat--large" data-counter="3">
+        <div class="stat-number">
+          <span class="counter-value">0</span><span class="stat-suffix">X</span>
+        </div>
+        <p class="stat-label">Average ROI increase</p>
+      </div>
+
+      <div class="stat stat--large" data-counter="24">
+        <div class="stat-number">
+          <span class="counter-value">0</span><span class="stat-suffix">hr</span>
+        </div>
+        <p class="stat-label">Response time</p>
+      </div>
+    </div>
+  </div>
+</section>
+-->
+
+
+<!-- ========================================
+     VARIANT 3: Card Style Stats
+     ======================================== -->
+<!--
+<section class="stats section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat stat--card stat--icon" data-counter="150">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+        </div>
+        <div class="stat-number">
+          <span class="counter-value">0</span><span class="stat-suffix">+</span>
+        </div>
+        <p class="stat-label">Projects Delivered</p>
+      </div>
+
+      <div class="stat stat--card stat--icon" data-counter="50">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+        </div>
+        <div class="stat-number">
+          <span class="counter-value">0</span><span class="stat-suffix">+</span>
+        </div>
+        <p class="stat-label">Team Members</p>
+      </div>
+
+      <div class="stat stat--card stat--icon" data-counter="12">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+        </div>
+        <div class="stat-number">
+          <span class="counter-value">0</span><span class="stat-suffix">+</span>
+        </div>
+        <p class="stat-label">Countries Served</p>
+      </div>
+
+      <div class="stat stat--card stat--icon" data-counter="99">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+          </svg>
+        </div>
+        <div class="stat-number">
+          <span class="counter-value">0</span><span class="stat-suffix">%</span>
+        </div>
+        <p class="stat-label">5-Star Reviews</p>
+      </div>
+    </div>
+  </div>
+</section>
+-->

@@ -1,0 +1,184 @@
+/**
+ * Stats Counter Component
+ * Animated number counters - used by 80% of templates
+ */
+
+/* ========================================
+   STATS SECTION
+   ======================================== */
+
+.stats {
+  padding: var(--space-16) 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-8);
+}
+
+@media (min-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ========================================
+   STAT ITEM
+   ======================================== */
+
+.stat {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: var(--text-4xl);
+  font-weight: var(--font-semibold);
+  line-height: var(--leading-none);
+  letter-spacing: var(--tracking-tighter);
+  color: var(--color-text);
+  font-variant-numeric: tabular-nums;
+}
+
+@media (min-width: 768px) {
+  .stat-number {
+    font-size: var(--text-5xl);
+  }
+}
+
+.stat-suffix {
+  font-size: 0.6em;
+  margin-left: 0.1em;
+}
+
+.stat-label {
+  margin-top: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+/* ========================================
+   VARIANT: WITH ICON
+   ======================================== */
+
+.stat--icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg-card);
+  border-radius: var(--radius-lg);
+  color: var(--color-accent);
+}
+
+.stat-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* ========================================
+   VARIANT: CARD STYLE
+   ======================================== */
+
+.stat--card {
+  padding: var(--space-6);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  transition: background-color var(--transition-base);
+}
+
+.stat--card:hover {
+  background: var(--color-bg-card-hover);
+}
+
+/* ========================================
+   VARIANT: LARGE (Hero stats)
+   ======================================== */
+
+.stat--large .stat-number {
+  font-size: var(--text-6xl);
+}
+
+.stat--large .stat-label {
+  font-size: var(--text-base);
+}
+
+/* ========================================
+   VARIANT: HORIZONTAL
+   ======================================== */
+
+.stat--horizontal {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  text-align: left;
+}
+
+.stat--horizontal .stat-label {
+  margin-top: 0;
+}
+
+/* ========================================
+   VARIANT: DIVIDERS
+   ======================================== */
+
+.stats-grid--dividers .stat {
+  position: relative;
+}
+
+.stats-grid--dividers .stat:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 60%;
+  background: var(--color-border);
+}
+
+@media (max-width: 767px) {
+  .stats-grid--dividers .stat:not(:last-child)::after {
+    display: none;
+  }
+}
+
+/* ========================================
+   VARIANT: COLORED NUMBERS
+   ======================================== */
+
+.stat--accent .stat-number {
+  color: var(--color-accent);
+}
+
+.stat--gradient .stat-number {
+  background: linear-gradient(135deg, var(--color-accent), #60A5FA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ========================================
+   ANIMATION STATES
+   ======================================== */
+
+.stat[data-counter] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity var(--duration-slow) var(--ease-out),
+              transform var(--duration-slow) var(--ease-out);
+}
+
+.stat[data-counter].in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
